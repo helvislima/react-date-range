@@ -43,14 +43,14 @@ export function createStaticRanges(ranges) {
 
 export const defaultStaticRanges = createStaticRanges([
   {
-    label: 'Today',
+    label: 'Hoje',
     range: () => ({
       startDate: defineds.startOfToday,
       endDate: defineds.endOfToday,
     }),
   },
   {
-    label: 'Yesterday',
+    label: 'Ontem',
     range: () => ({
       startDate: defineds.startOfYesterday,
       endDate: defineds.endOfYesterday,
@@ -58,28 +58,28 @@ export const defaultStaticRanges = createStaticRanges([
   },
 
   {
-    label: 'This Week',
+    label: 'Esta semana',
     range: () => ({
       startDate: defineds.startOfWeek,
       endDate: defineds.endOfWeek,
     }),
   },
   {
-    label: 'Last Week',
+    label: 'Última semank',
     range: () => ({
       startDate: defineds.startOfLastWeek,
       endDate: defineds.endOfLastWeek,
     }),
   },
   {
-    label: 'This Month',
+    label: 'Este mês',
     range: () => ({
       startDate: defineds.startOfMonth,
       endDate: defineds.endOfMonth,
     }),
   },
   {
-    label: 'Last Month',
+    label: 'Último mês',
     range: () => ({
       startDate: defineds.startOfLastMonth,
       endDate: defineds.endOfLastMonth,
@@ -89,7 +89,7 @@ export const defaultStaticRanges = createStaticRanges([
 
 export const defaultInputRanges = [
   {
-    label: 'days up to today',
+    label: 'dias anterior à hoje',
     range(value) {
       return {
         startDate: addDays(defineds.startOfToday, (Math.max(Number(value), 1) - 1) * -1),
@@ -103,7 +103,7 @@ export const defaultInputRanges = [
     },
   },
   {
-    label: 'days starting today',
+    label: 'dias à partir de hoje',
     range(value) {
       const today = new Date();
       return {
